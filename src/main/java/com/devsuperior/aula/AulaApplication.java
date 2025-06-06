@@ -26,11 +26,17 @@ public class AulaApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		Order order = new Order(3333, 199.0, 0.0);
-		orderService.codigo(order);
-		double total = orderService.total(order);
-		System.out.println("Valor do pedido: " + order.getValor());
-		System.out.println("Frete: " + order.getFrete());
-		System.out.println("Total a pagar: " + total);
+		Order order1 = new Order(1034, 150.0, 20.0);
+		orderService.codigo(order1);
+		orderService.total(order1);
+
+		Order order2 = new Order(2282, 800.0, 10.0);
+		orderService.codigo(order2);
+		orderService.total(order2);
+
+		Order order3 = new Order(1309, 95.90, 0.0);
+		orderService.codigo(order3);
+		orderService.total(order3);
+
 	}
 }

@@ -13,4 +13,6 @@ public class Order {
     private double valor;
     private double frete;
 
+
+
 }

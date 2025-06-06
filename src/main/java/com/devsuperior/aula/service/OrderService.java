@@ -12,15 +12,17 @@ public class OrderService {
     private ShippingService shippingService;
 
     public void codigo(Order order) {
-        System.out.println("Pedido código: " + order.getCode());
+        System.out.println("Pedido código " + order.getCode());
     }
 
 
-    public double total(Order order) {
+    public void total(Order order) {
         double frete = shippingService.pagarFrete(order);
         double total = order.getValor() + frete;
-        return total;
+        System.out.println("Valor total: " + total);
+
     }
+
 
 }
 
