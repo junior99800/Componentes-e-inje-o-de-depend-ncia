@@ -11,7 +11,7 @@ import lombok.Setter;
 public class Order {
     private int code;
     private double valor;
-    private double frete;
+    private double desconto;
 
 
 

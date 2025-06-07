@@ -17,12 +17,16 @@ public class OrderService {
 
 
     public void total(Order order) {
+        double valorbasico = order.getValor();
+        double desconto = valorbasico * (order.getDesconto() / 100.0);
+        double valorComDesconto = order.getValor() - desconto;
+
         double frete = shippingService.pagarFrete(order);
-        double total = order.getValor() + frete;
-        System.out.println("Valor total: " + total);
+        double total = valorComDesconto + frete;
+
+        System.out.printf("Valor total: R$ %.2f%n", total);
 
     }
-
 
 }
 

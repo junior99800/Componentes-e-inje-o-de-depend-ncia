@@ -19,7 +19,7 @@ public class ShippingService {
             frete = 0.0;
         }
 
-        order.setFrete(frete);
+        order.setDesconto(frete);
         return frete;
     }
 }
